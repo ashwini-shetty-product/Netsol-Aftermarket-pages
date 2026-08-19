@@ -1,0 +1,7 @@
+:root{
+  --ns-shadow-xs:0 1px 2px rgba(15,15,17,.06);
+  --ns-shadow-sm:0 2px 6px rgba(15,15,17,.07);
+  --ns-shadow-md:0 8px 20px rgba(15,15,17,.09);
+  --ns-shadow-lg:0 16px 40px rgba(15,15,17,.12);
+  --ns-shadow-focus:0 0 0 3px rgba(50,110,234,.35);
+}

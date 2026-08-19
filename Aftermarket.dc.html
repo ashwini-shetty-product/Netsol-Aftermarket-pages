@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Aftermarket domains page" description="Buy an already-registered domain: hero search, four acquisition routes, premium listings, certified-offer form, how-it-works, FAQ." -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:var(--ns-surface-page);font-family:var(--ns-font-body);color:var(--ns-text-primary)">
+<div class="ns-promobar" style="background-color: #E08542"><span>Someone already owns the name you want? You can still get it.</span><a href="#how">See how it works</a></div>
+<header style="position:sticky;top:0;z-index:300;background:#fff;border-bottom:1px solid var(--ns-border-subtle)">
+<div class="ns-container" style="display:flex;align-items:center;gap:32px;height:72px">
+<a class="ns-wordmark" href="#" style="flex-shrink:0"><img src="assets/logo-network-solutions.png" alt="Network Solutions" style="display:block;height:32px;width:auto"></a>
+<nav style="display:flex;gap:20px;flex:1"><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Domains</a><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Websites</a><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Hosting</a><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Email</a><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Security</a></nav>
+<a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Cart (0)</a>
+<button class="ns-btn ns-btn--secondary ns-btn--sm">Sign in</button>
+</div>
+</header>
+
+
+
+<section class="ns-on-dark" style="background:var(--ns-neutral-900);padding:64px 0 80px">
+<div class="ns-container" style="display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:32px"><span style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ns-neutral-400)">Aftermarket domains by</span><img src="./assets/snapnames-logo-white.svg" alt="SnapNames" style="display:block;width:190px;height:auto"></div>
+<h1 style="font-size:var(--ns-text-display-1);color:#fff;margin:0;line-height:1.1;text-align:center">Get the name you<br>actually wanted</h1><div class="ns-container" style="max-width:880px;text-align:center">
+
+
+
+<form class="ns-search" style="margin-top:40px" onsubmit="return false"><label class="ns-visually-hidden" for="am-search">Search aftermarket domains</label><input id="am-search" type="text" placeholder="riverbend.com"><button class="ns-btn ns-btn--accent" type="submit" style="background-color: #E08542">Search</button></form><p style="margin:20px auto 0;max-width:620px;font-size:16px;line-height:1.6;color:#fff;text-align:center">Registered doesn't mean off-limits — search any name and we'll show you what its owner will take for it.</p>
+
+</div>
+</section><nav aria-label="Browse aftermarket domains" style="background:#fff;border-bottom:1px solid var(--ns-border-subtle)"><div class="ns-container" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:20px 24px"><a href="#auctions-hot" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:#E08542;color:#fff;font-size:15px;font-weight:600;text-decoration:none;transition:background 200ms cubic-bezier(.2,0,.2,1)" style-hover="background:#C9752F">Hot picks</a><a href="#auctions-hot" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:var(--ns-surface-subtle);border:1.5px solid var(--ns-border-subtle);color:var(--ns-neutral-900);font-size:15px;font-weight:600;text-decoration:none;transition:background 200ms cubic-bezier(.2,0,.2,1)" style-hover="background:#EDEDEF">Expired domains</a><a href="#auctions-best" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:var(--ns-surface-subtle);border:1.5px solid var(--ns-border-subtle);color:var(--ns-neutral-900);font-size:15px;font-weight:600;text-decoration:none;transition:background 200ms cubic-bezier(.2,0,.2,1)" style-hover="background:#EDEDEF">Best of the drop</a><a href="#auctions-last" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:var(--ns-surface-subtle);border:1.5px solid var(--ns-border-subtle);color:var(--ns-neutral-900);font-size:15px;font-weight:600;text-decoration:none;transition:background 200ms cubic-bezier(.2,0,.2,1)">Last chance</a><a href="#categories" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:var(--ns-surface-subtle);border:1.5px solid var(--ns-border-subtle);color:var(--ns-neutral-900);font-size:15px;font-weight:600;text-decoration:none;transition:background 200ms cubic-bezier(.2,0,.2,1)" style-hover="background:#EDEDEF" data-y="cat">Top categories</a></div></nav><section class="ns-container">
+
+<ul class="ns-stats"><li><span class="figure" style="font-size:26px;line-height:1.2">Millions of names</span><span class="caption" style="font-size:14px;line-height:1.5">Already for sale, most with a price on them today — not "make an offer and wait"</span></li><li><span class="figure" style="font-size:26px;line-height:1.2">Since 2000</span><span class="caption" style="font-size:14px;line-height:1.5">Among the first aftermarket platforms ever built. Still one of the largest</span></li><li><span class="figure" style="font-size:26px;line-height:1.2">Exclusive inventory</span><span class="caption" style="font-size:14px;line-height:1.5">Names from top registrars worldwide, some available nowhere else</span></li><li><span class="figure" style="font-size:26px;line-height:1.2">24/7</span><span class="caption" style="font-size:14px;line-height:1.5">Real domain experts, awake whenever you are</span></li></ul></section>
+
+<section class="ns-section" id="auctions-hot">
+<div class="ns-container">
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><button class="ns-btn ns-btn--sm" style="background-color:#E08542;color:#fff;border-color:#E08542" onClick="{{ toggleOpen }}">{{ panelToggleLabel }}</button><div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ activeChips }}" as="c" hint-placeholder-count="4"><span style="{{ c.style }}">{{ c.label }}</span></sc-for></div><span style="margin-left:auto;font-size:14px;color:var(--ns-text-secondary)">1,482 auctions open</span></div>
+
+<sc-if value="{{ open }}" hint-placeholder-val="{{ true }}">
+<div style="margin-top:12px;padding:20px;border:1px solid var(--ns-border-subtle);border-radius:20px;background:#fff;box-shadow:var(--ns-shadow-xs)">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;align-items:start">
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px">
+<h5 style="margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Search type</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{ searchTypes }}" as="t" hint-placeholder-count="4"><button style="{{ t.style }}" onClick="{{ t.pick }}">{{ t.mark }}{{ t.label }}</button></sc-for>
+</div>
+</div>
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:20px">
+<div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px"><h5 style="margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">TLDs</h5><button onClick="{{ openTld }}" style="border:none;background:transparent;padding:0;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9C4A14;cursor:pointer">All extensions</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{ tldChips }}" as="t" hint-placeholder-count="6"><button style="{{ t.style }}" onClick="{{ t.pick }}">{{ t.label }}</button></sc-for>
+</div>
+</div>
+</div>
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:14px">
+<div>
+<h5 style="margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Category</h5>
+<button style="{{ categoryStyle }}" onClick="{{ openCat }}">{{ categoryLabel }}<span aria-hidden="true" style="font-size:12px;color:var(--ns-text-secondary)">▾</span></button>
+</div>
+<div>
+<h5 style="margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Special event</h5>
+<select value="{{ event }}" onChange="{{ onEvent }}" aria-label="Special event" style="width:100%;min-height:38px;padding:0 10px;border-radius:8px;border:1.5px solid #E08542;background:#FBEADF;color:#9C4A14;font-size:14px;font-weight:600"><option value="No event selected">No event selected</option><option value="Adult featured domains">Adult featured domains</option><option value="Featured domains">Featured domains</option><option value="Hotpicks Domains">Hotpicks Domains</option><option value="Numerical domains and 4 letter domains">Numerical domains and 4 letter domains</option><option value="Best domains">Best domains</option><option value="Exclusive premium domains from Name Trends">Exclusive premium domains from Name Trends</option></select>
+</div>
+<div>
+<h5 style="margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Order by date</h5>
+<select value="{{ orderByDate }}" onChange="{{ onOrderByDate }}" aria-label="Order by date" style="width:100%;min-height:38px;padding:0 10px;border-radius:8px;border:1.5px solid var(--ns-border-subtle);background:#fff;color:var(--ns-text-primary);font-size:14px;font-weight:600"><option value="Anytime">Anytime</option><option value="Within 1 day (24 hrs.)">Within 1 day (24 hrs.)</option><option value="Within 2 days (48 hrs.)">Within 2 days (48 hrs.)</option><option value="Within 3 days (72 hrs.)">Within 3 days (72 hrs.)</option><option value="Within 4 days (96 hrs.)">Within 4 days (96 hrs.)</option><option value="Within 5 days (120 hrs.)">Within 5 days (120 hrs.)</option><option value="Within 6 days (144 hrs.)">Within 6 days (144 hrs.)</option><option value="Within 7 days (168 hrs.)">Within 7 days (168 hrs.)</option><option value="Within 30 days">Within 30 days</option></select>
+</div>
+</div>
+
+</div>
+
+<button onClick="{{ toggleAdv }}" style="margin-top:12px;display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 2px;border:none;background:transparent;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9C4A14;cursor:pointer">{{ advToggleLabel }}</button>
+
+<sc-if value="{{ advOpen }}" hint-placeholder-val="{{ true }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;align-items:start">
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px">
+<h5 style="margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Sources</h5>
+<p style="margin:0 0 12px;font-size:12px;line-height:1.45;color:var(--ns-text-secondary)">Deleting names are scheduled for deletion. Expiring names come from our exclusive registrar partners. Private seller names are sold by individuals.</p>
+<div style="display:flex;flex-direction:column;gap:12px">
+<sc-for list="{{ sources }}" as="s" hint-placeholder-count="3"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px"><span>{{ s.label }}</span><button aria-pressed="{{ s.on }}" aria-label="{{ s.label }}" style="{{ s.track }}" onClick="{{ s.toggle }}"><span style="{{ s.knob }}"></span></button></div></sc-for>
+</div>
+</div>
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px">
+<h5 style="margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Listing type</h5>
+<p style="margin:0 0 12px;font-size:12px;line-height:1.45;color:var(--ns-text-secondary)">Buy it now is a fixed price. In auction is bidding right now. Available soon starts in the next thirty days. Bid or buy lets you end the auction at the listed price.</p>
+<div style="display:flex;flex-direction:column;gap:12px">
+<sc-for list="{{ listing }}" as="s" hint-placeholder-count="4"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px"><span>{{ s.label }}</span><button aria-pressed="{{ s.on }}" aria-label="{{ s.label }}" style="{{ s.track }}" onClick="{{ s.toggle }}"><span style="{{ s.knob }}"></span></button></div></sc-for>
+</div>
+</div>
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px">
+<h5 style="margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Exclusions</h5>
+<p style="margin:0 0 12px;font-size:12px;line-height:1.45;color:var(--ns-text-secondary)">No IDNs leaves out internationalized names beginning with "xn--". All exclusions are off by default.</p>
+<div style="display:flex;flex-direction:column;gap:12px">
+<sc-for list="{{ exclusions }}" as="s" hint-placeholder-count="4"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px"><span>{{ s.label }}</span><button aria-pressed="{{ s.on }}" aria-label="{{ s.label }}" style="{{ s.track }}" onClick="{{ s.toggle }}"><span style="{{ s.knob }}"></span></button></div></sc-for>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;align-items:start">
+<sc-for list="{{ sliderRows }}" as="r" hint-placeholder-count="4"><div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px"><h5 style="margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">{{ r.label }}</h5><div style="display:flex;justify-content:space-between;font-size:13px;color:var(--ns-text-secondary)"><span>{{ r.low }}</span><span style="font-weight:600;color:var(--ns-text-primary)">{{ r.display }}</span></div><input type="range" min="{{ r.min }}" max="{{ r.max }}" step="{{ r.step }}" value="{{ r.value }}" onChange="{{ r.onChange }}" style="width:100%;margin-top:10px;accent-color:#E08542;height:4px"></div></sc-for>
+</div>
+
+<div style="margin-top:14px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--ns-border-subtle)">
+<label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600">Sort by<select value="{{ sortBy }}" onChange="{{ onSortBy }}" style="min-height:40px;padding:0 12px;border-radius:8px;border:1.5px solid var(--ns-border-subtle);background:#fff;font-size:14px"><option value="Best match">Best match</option><option value="Domain name — A to Z">Domain name — A to Z</option><option value="Domain name — Z to A">Domain name — Z to A</option><option value="Bidders — min to max">Bidders — min to max</option><option value="Bidders — max to min">Bidders — max to min</option><option value="Minimum bid — lowest first">Minimum bid — lowest first</option><option value="Minimum bid — highest first">Minimum bid — highest first</option><option value="Reserve not met first">Reserve not met first</option><option value="Reserve met first">Reserve met first</option><option value="Ending soonest first">Ending soonest first</option><option value="Ending soonest last">Ending soonest last</option></select></label>
+<label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600">Items per page<select value="{{ perPage }}" onChange="{{ onPerPage }}" style="min-height:40px;padding:0 12px;border-radius:8px;border:1.5px solid var(--ns-border-subtle);background:#fff;font-size:14px"><option value="5">5</option><option value="25">25</option><option value="100">100</option><option value="250">250</option><option value="500">500</option></select></label>
+</div>
+
+</sc-if>
+
+<div style="margin-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+<button class="ns-btn ns-btn--secondary" onClick="{{ reset }}">Reset filters</button>
+<button class="ns-btn" style="background-color:#E08542;color:#fff;border-color:#E08542">Update results</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ tldOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:500;background:rgba(15,15,17,.5);display:flex;align-items:center;justify-content:center;padding:24px">
+<div role="dialog" aria-label="Extensions" style="width:100%;max-width:720px;max-height:80vh;overflow:auto;background:#fff;border-radius:24px;padding:32px;box-shadow:var(--ns-shadow-lg)">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+<h3 style="margin:0;font-size:var(--ns-text-h3)">Extensions</h3>
+<div style="display:flex;align-items:center;gap:12px"><button class="ns-btn ns-btn--secondary ns-btn--sm" onClick="{{ clearTlds }}">Clear all</button><button class="ns-btn ns-btn--secondary ns-btn--sm" onClick="{{ selectAllTlds }}">Select all</button><button class="ns-btn ns-btn--sm" style="background-color:#E08542;color:#fff;border-color:#E08542" onClick="{{ closeTld }}">Apply</button><button aria-label="Close" onClick="{{ closeTld }}" style="width:44px;height:44px;border:none;background:transparent;font-size:20px;cursor:pointer;color:var(--ns-text-secondary)">×</button></div>
+</div>
+<p style="margin:12px 0 0;font-size:14px;color:var(--ns-text-secondary)">{{ tldSummary }}</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+<sc-for list="{{ allTldChips }}" as="t" hint-placeholder-count="23"><button style="{{ t.style }}" onClick="{{ t.pick }}">{{ t.label }}</button></sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ catOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:500;background:rgba(15,15,17,.5);display:flex;align-items:center;justify-content:center;padding:24px">
+<div role="dialog" aria-label="Search category" style="width:100%;max-width:720px;max-height:80vh;overflow:auto;background:#fff;border-radius:24px;padding:32px;box-shadow:var(--ns-shadow-lg)">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+<h3 style="margin:0;font-size:var(--ns-text-h3)">Search category</h3>
+<div style="display:flex;align-items:center;gap:12px"><button class="ns-btn ns-btn--secondary ns-btn--sm" onClick="{{ clearCat }}">Clear</button><button aria-label="Close" onClick="{{ closeCat }}" style="width:44px;height:44px;border:none;background:transparent;font-size:20px;cursor:pointer;color:var(--ns-text-secondary)">×</button></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
+<sc-for list="{{ categories }}" as="c" hint-placeholder-count="25"><button style="{{ c.style }}" onClick="{{ c.pick }}">{{ c.label }}</button></sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:40px">
+<header class="ns-section-head" style="margin:0"><span class="ns-eyebrow">Live bidding</span><h2>Hot picks</h2><p>Trending domains with active bidding right now.</p></header>
+<a class="ns-link-arrow" style="color:#9C4A14" href="#">View all auctions</a>
+</div>
+<div class="ns-grid" style="margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<article class="ns-auction-card"><div class="row"><span class="name">dickflix.com</span><span class="bid">$19.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Adult</span><span class="clock">Ends in 2h 14m</span><span>14 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">salsacentral.com</span><span class="bid">$39.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Entertainment</span><span class="clock">Ends in 6h 03m</span><span>7 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">artsfly.com</span><span class="bid">$59.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Arts</span><span class="clock">Ends in 11h 47m</span><span>23 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">3v.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Other</span><span class="clock">Ends in 1d 04h</span><span>3 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">greeno.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Other</span><span class="clock">Ends in 1d 19h</span><span>9 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">tenes.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Other</span><span class="clock">Ends in 2d 02h</span><span>18 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">voiceads.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Communication</span><span class="clock">Ends in 3h 38m</span><span>5 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">bizports.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Business</span><span class="clock">Ends in 8h 21m</span><span>11 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">topanimations.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Entertainment</span><span class="clock">Ends in 14h 55m</span><span>2 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">maritimeweb.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Transportation</span><span class="clock">Ends in 2d 11h</span><span>27 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">spinsisters.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Entertainment</span><span class="clock">Ends in 4h 09m</span><span>6 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">wildbazaar.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Shopping</span><span class="clock">Ends in 1d 08h</span><span>15 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">In auction</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+</div>
+</div>
+</section>
+
+<section class="ns-section" id="auctions-best">
+<div class="ns-container">
+<header class="ns-section-head"><span class="ns-eyebrow">Highest value</span><h2>Best of the drop</h2><p>The strongest names currently open for bidding.</p></header>
+<div class="ns-grid" style="margin-top:32px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<article class="ns-auction-card"><div class="row"><span class="name">travelplanning.net</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Geo</span><span class="clock">Ends in 2h 14m</span><span>14 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">viewphones.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Communication</span><span class="clock">Ends in 6h 03m</span><span>7 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">fltd.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Other</span><span class="clock">Ends in 11h 47m</span><span>23 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">knbl.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Other</span><span class="clock">Ends in 1d 04h</span><span>3 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">tent-trailer.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Transportation</span><span class="clock">Ends in 1d 19h</span><span>9 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">generalcamera.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Technology</span><span class="clock">Ends in 2d 02h</span><span>18 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">skiarea.net</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Sports</span><span class="clock">Ends in 3h 38m</span><span>5 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">ski-area.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Sports</span><span class="clock">Ends in 8h 21m</span><span>11 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">boogiecheck.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Entertainment</span><span class="clock">Ends in 14h 55m</span><span>2 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">valueseek.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Business</span><span class="clock">Ends in 2d 11h</span><span>27 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">ski-snow.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Sports</span><span class="clock">Ends in 4h 09m</span><span>6 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">e-caskets.com</span><span class="bid">$79.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Other</span><span class="clock">Ends in 1d 08h</span><span>15 bidders</span><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#FBEADF;color:#9C4A14">Pending delete</span></div><div class="row"><button class="ns-btn ns-btn--sm">Place bid</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+</div>
+</div>
+</section>
+
+<section class="ns-section" style="background:var(--ns-surface-subtle)" id="auctions-last">
+<div class="ns-container">
+<header class="ns-section-head"><span class="ns-eyebrow">Closing soon</span><h2>Last chance</h2><p>Buy now, with proven value and immediate availability.</p></header>
+<div class="ns-grid" style="margin-top:32px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<article class="ns-auction-card"><div class="row"><span class="name">bizports.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Business</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">dickflix.com</span><span class="bid">$19.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Adult</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">topanimations.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Entertainment</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">maritimeweb.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Transportation</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">bstq.com</span><span class="bid">$160.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Other</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">spinsisters.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Entertainment</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">wildbazaar.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Shopping</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">onestopwireless.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Communication</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">divashot.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">People</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">jrcatering.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Food and drink</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">webgui.net</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">Technology</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+<article class="ns-auction-card"><div class="row"><span class="name">womenloves.com</span><span class="bid">$69.00</span></div><div class="meta" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px"><span style="display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)">People</span><span class="clock">Closeout</span><span>No bidding</span><span>Buy it now price</span></div><div class="row"><button class="ns-btn ns-btn--sm">Buy now</button><a class="ns-link-arrow" style="color:#9C4A14" href="#">View details</a></div></article>
+</div>
+</div>
+</section>
+
+<section class="ns-section" id="categories">
+<div class="ns-container">
+<header class="ns-section-head"><span class="ns-eyebrow" style="color:#C4611F">% of sales per category</span><h2>Top categories</h2><p>Categories with the most sales in the last five days.</p></header>
+<ul style="list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Geo</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">19.6%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Entertainment</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">9.3%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Time</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">6.5%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Home and garden</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">5.3%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Technology</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">5.3%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Health</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">5.0%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Business</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">4.3%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Transportation</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">4.0%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Other</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">3.9%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Food and drink</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">3.9%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Plants and animals</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">3.3%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Science and education</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">3.3%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Finance</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">3.2%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Arts</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">2.9%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">People</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">2.5%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Adult</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">2.5%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Society</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">2.5%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Family and friends</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">2.4%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Sports</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">2.3%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Shopping</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">2.2%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Pets</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">2.0%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Locations</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">1.8%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Clothing and accessories</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">1.6%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Communication</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">1.4%</span></li>
+<li style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)"><a href="#auctions-hot" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--ns-text-primary)">Construction and materials</a><span style="font-size:15px;font-weight:600;color:#C4611F;font-variant-numeric:tabular-nums">1.2%</span></li>
+</ul>
+</div>
+</section>
+
+<section class="ns-section" style="background:var(--ns-surface-subtle)" id="how">
+<div class="ns-container">
+<header class="ns-section-head"><span class="ns-eyebrow" style="color:#C4611F">Domain marketplace</span><h2>Three ways to get a name that is already registered</h2><p>Buy it outright from our resale inventory, make an anonymous offer to the current holder, or queue up for a name that is about to expire.</p></header>
+<div class="ns-grid ns-grid--3" style="margin-top:32px">
+<article class="ns-card ns-card--interactive"><span class="ns-badge" style="background:#FBEADF;color:#9C4A14;border-color:transparent">Buy it today</span><h4>Select a premium resale domain</h4><p>Enter a domain name or keyword to browse our inventory of previously owned domains that come with built-in traffic, search engine value, and backlinks. No bidding or negotiations are required.</p><div class="ns-card__foot"><a class="ns-link-arrow" style="color:#9C4A14" href="#listings">Browse the inventory</a></div></article>
+<article class="ns-card ns-card--interactive"><span class="ns-badge" style="background:#FBEADF;color:#9C4A14;border-color:transparent">Anonymous</span><h4>Place a certified offer</h4><p>Enter the domain name you want and we will make an anonymous offer to buy it from the current holder on your behalf.</p><div class="ns-card__foot"><a class="ns-link-arrow" style="color:#9C4A14" href="#offer">Start an offer</a></div></article>
+<article class="ns-card ns-card--interactive"><span class="ns-badge" style="background:#FBEADF;color:#9C4A14;border-color:transparent">Expiring names</span><h4>Place a backorder</h4><p>Thousands of great domain names expire every day. Search our expired domains list to see if the domain you want is ready to expire.</p><div class="ns-card__foot"><a class="ns-link-arrow" style="color:#9C4A14" href="#offer">Search expiring domains</a></div></article>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="ns-section" style="background:var(--ns-surface-subtle)">
+<div class="ns-container" style="max-width:760px">
+<h2 style="font-size:var(--ns-text-h1)">Questions, answered</h2>
+<div class="ns-accordion" style="margin-top:24px">
+<details open=""><summary>What is a premium or aftermarket domain?</summary><div class="body">A domain someone already owns and is offering for sale. These names are often short, memorable, or built around popular keywords.</div></details>
+<details><summary>How is buying an aftermarket domain different from registering a new one?</summary><div class="body">A new registration claims a name nobody has taken, at a standard price. An aftermarket domain is already owned, so you buy it from the current holder and the market sets the price — based on things like length, how long it has been registered, keyword demand, and existing traffic.</div></details>
+<details><summary>Why is this domain more expensive than a regular registration?</summary><div class="body">You are paying an owner, not just a registration fee. Short, memorable, in-demand names cost more.</div></details>
+<details><summary>Why can I not register this domain right away?</summary><div class="body">It is not unclaimed — someone owns it. Depending on the listing, you can either buy it instantly or bid for it in an auction.</div></details>
+<details><summary>How do I know whether a domain is a direct purchase or an auction?</summary><div class="body">The listing tells you. Options vary from one name to the next.</div></details>
+<details><summary>What is the difference between "Purchase" and "Place a bid"?</summary><div class="body"><strong>Purchase</strong> — Buy at the listed price, no bidding or negotiation. Fulfillment usually takes under 10 days.<br><strong>Place a bid</strong> — You join a live auction. Bids are binding and cannot be retracted, so if you win, you are committed to buy. If you are outbid, you owe nothing. Auctions take longer, and we will keep you posted at every step.</div></details>
+<details><summary>Am I guaranteed to get the domain if I place a backorder?</summary><div class="body">No. Others may want the same name, and some factors are outside our control. You will get it only if the domain can be secured and you win the auction.</div></details>
+<details><summary>When will I know if I got the domain?</summary><div class="body">It depends on the domain and its status — some resolve quickly, others take several days or longer. We will keep you updated at every stage.</div></details>
+<details><summary>What protects me if the seller does not hand over the domain?</summary><div class="body">You are not charged until the domain is successfully acquired. If it cannot be secured, you pay nothing.</div></details>
+<details><summary>Can I get a refund if I change my mind?</summary><div class="body">No. Once the domain is acquired and in your account, the sale is final and cannot be cancelled or refunded. Please be sure before you buy or bid.</div></details>
+<details><summary>Am I responsible for checking trademarks and the domain history?</summary><div class="body">Yes — research any name before you commit. Check the spelling carefully, including letters swapped with numbers (a "1" where you expected an "l"). There are no refunds once a domain is acquired, so if you win a name spelled differently than you intended, or find a trademark on it later, the purchase stands. Confirm the domain does not infringe anyone's rights before you bid or place a backorder.</div></details>
+</div>
+</div>
+</section>
+
+<section class="ns-section">
+<div class="ns-container" style="text-align:center;max-width:640px">
+<span class="ns-eyebrow" style="color:#C4611F">Start the search</span>
+<h2 style="font-size:var(--ns-text-h1);margin-top:8px">Know the name you want?</h2>
+<p style="margin-top:12px;color:var(--ns-text-secondary);font-size:18px;line-height:1.65">Search it, and we will tell you exactly how to get it.</p>
+<div style="display:flex;gap:12px;justify-content:center;margin-top:32px;flex-wrap:wrap"><button class="ns-btn ns-btn--accent" style="background-color:#E08542;color:#fff">Browse premium resale domains</button><button class="ns-btn ns-btn--secondary">Place a certified offer</button></div>
+</div>
+</section><div class="ns-promobar" style="background-color: #E08542"><span>Powered by SNAPNAMES&nbsp;</span></div>
+
+<footer class="ns-footer ns-on-dark">
+<div class="ns-container">
+<div class="ns-footer-cols">
+<div><h5>Domains</h5><ul><li><a href="#">Domain search</a></li><li><a href="#">Aftermarket domains</a></li><li><a href="#">Domain transfer</a></li><li><a href="#">WHOIS search</a></li></ul></div>
+<div><h5>Support</h5><ul><li><a href="#">Customer service</a></li><li><a href="#">Accessibility</a></li><li><a href="#">Report abuse</a></li></ul></div>
+<div><h5>Resources</h5><ul><li><a href="#">Blog</a></li><li><a href="#">Renewal pricing</a></li><li><a href="#">Site map</a></li></ul></div>
+<div><h5>Company</h5><ul><li><a href="#">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Legal</a></li></ul></div>
+</div>
+<div class="legal">© 1998–2026 Network Solutions, LLC. All rights reserved.</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    open: false, advOpen: false, catOpen: false,
+    searchType: 'Contains',
+    tlds: ['.com', '.net', '.org'],
+    tldOpen: false,
+    category: '',
+    event: 'Hotpicks Domains',
+    orderByDate: 'Anytime',
+    sortBy: 'Best match',
+    perPage: '25',
+    sources: { Deleting: true, Expiring: true, 'Private seller': true },
+    listing: { 'Buy it now': true, 'In auction': true, 'Available soon': true, 'Bid or buy': true },
+    exclusions: { 'No hyphens': false, 'No numbers': false, 'No IDNs': false, 'No alpha': false },
+    sliders: { order: 31, price: 9600, chars: 61, words: 6 }
+  };
+  allTlds = ['.com', '.net', '.org', '.info', '.uk', '.club', '.co', '.mobi', '.us', '.me', '.biz', '.de', '.io', '.tv', '.cc', '.xyz', '.website', '.online', '.pro', '.name', '.link', '.today', '.tech'];
+  toggleGroup(group, key) {
+    this.setState(s => ({ [group]: Object.assign({}, s[group], { [key]: !s[group][key] }) }));
+  }
+  switchList(group) {
+    const g = this.state[group];
+    return Object.keys(g).map(key => ({
+      label: key,
+      on: g[key],
+      toggle: () => this.toggleGroup(group, key),
+      track: 'position:relative;width:44px;height:24px;flex-shrink:0;border-radius:999px;border:none;cursor:pointer;padding:0;transition:background 200ms cubic-bezier(.2,0,.2,1);background:' + (g[key] ? '#E08542' : '#D3D3D8'),
+      knob: 'position:absolute;top:3px;left:' + (g[key] ? '23px' : '3px') + ';width:18px;height:18px;border-radius:999px;background:#fff;transition:left 200ms cubic-bezier(.2,0,.2,1)'
+    }));
+  }
+  renderVals() {
+    const s = this.state;
+    const chip = (on) => 'display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;transition:background 200ms cubic-bezier(.2,0,.2,1);border:1.5px solid ' + (on ? '#E08542' : 'var(--ns-border-subtle)') + ';background:' + (on ? '#FBEADF' : '#fff') + ';color:' + (on ? '#9C4A14' : 'var(--ns-text-primary)');
+    return {
+      open: s.open, catOpen: s.catOpen,
+      toggleOpen: () => this.setState(p => ({ open: !p.open })),
+      openCat: () => this.setState({ catOpen: true }),
+      closeCat: () => this.setState({ catOpen: false }),
+      clearCat: () => this.setState({ category: '', catOpen: false }),
+      panelToggleLabel: s.open ? 'Hide filters' : 'Filters',
+      advOpen: s.advOpen,
+      advToggleLabel: s.advOpen ? 'Fewer options' : 'More options',
+      toggleAdv: () => this.setState(p => ({ advOpen: !p.advOpen })),
+      activeChips: (() => {
+        const out = [{ label: 'Search type: ' + s.searchType }];
+        if (s.tlds.length) out.push({ label: s.tlds.length > 3 ? s.tlds.length + ' extensions' : s.tlds.join(', ') });
+        if (s.category) out.push({ label: s.category });
+        if (s.event && s.event !== 'No event selected') out.push({ label: s.event });
+        if (s.orderByDate !== 'Anytime') out.push({ label: s.orderByDate });
+        const listing = Object.keys(s.listing).filter(k => s.listing[k]);
+        if (listing.length && listing.length < 4) out.push({ label: listing.join(', ') });
+        const sources = Object.keys(s.sources).filter(k => s.sources[k]);
+        if (sources.length && sources.length < 3) out.push({ label: sources.join(', ') });
+        const ex = Object.keys(s.exclusions).filter(k => s.exclusions[k]);
+        ex.forEach(k => out.push({ label: k }));
+        if (s.sliders.price <= 9500) out.push({ label: 'Under $' + s.sliders.price.toLocaleString() });
+        if (s.sliders.chars <= 60) out.push({ label: 'Up to ' + s.sliders.chars + ' characters' });
+        if (s.sliders.words <= 5) out.push({ label: 'Up to ' + s.sliders.words + ' words' });
+        if (s.sliders.order <= 30) out.push({ label: s.sliders.order === 0 ? 'Ending today' : 'Within ' + s.sliders.order + ' days' });
+        return out.map(o => ({ label: o.label, style: 'display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);font-size:13px;font-weight:600;color:var(--ns-text-primary)' }));
+      })(),
+      openTld: () => this.setState({ tldOpen: true }),
+      closeTld: () => this.setState({ tldOpen: false }),
+      clearTlds: () => this.setState({ tlds: [] }),
+      selectAllTlds: () => this.setState({ tlds: this.allTlds.slice() }),
+      tldOpen: s.tldOpen,
+      tldSummary: s.tlds.length ? s.tlds.join('  ') : 'No extensions selected',
+      allTldChips: this.allTlds.map(t => ({
+        label: t, style: chip(s.tlds.indexOf(t) > -1),
+        pick: () => this.setState(p => ({ tlds: p.tlds.indexOf(t) > -1 ? p.tlds.filter(x => x !== t) : p.tlds.concat([t]) }))
+      })),
+      orderByDate: s.orderByDate,
+      orderByDateOptions: ['Anytime', 'Within 1 day (24 hrs.)', 'Within 2 days (48 hrs.)', 'Within 3 days (72 hrs.)', 'Within 4 days (96 hrs.)', 'Within 5 days (120 hrs.)', 'Within 6 days (144 hrs.)', 'Within 7 days (168 hrs.)', 'Within 30 days'],
+      onOrderByDate: (e) => this.setState({ orderByDate: e.target.value }),
+      event: s.event,
+      eventOptions: ['No event selected', 'Adult featured domains', 'Featured domains', 'Hotpicks Domains', 'Numerical domains and 4 letter domains', 'Best domains', 'Exclusive premium domains from Name Trends'],
+      onEvent: (e) => this.setState({ event: e.target.value }),
+      sortBy: s.sortBy,
+      sortByOptions: ['Best match', 'Domain name — A to Z', 'Domain name — Z to A', 'Bidders — min to max', 'Bidders — max to min', 'Minimum bid — lowest first', 'Minimum bid — highest first', 'Reserve not met first', 'Reserve met first', 'Ending soonest first', 'Ending soonest last'],
+      onSortBy: (e) => this.setState({ sortBy: e.target.value }),
+      perPage: s.perPage,
+      perPageOptions: ['5', '25', '100', '250', '500'],
+      onPerPage: (e) => this.setState({ perPage: e.target.value }),
+      searchTypes: ['Suggestions', 'Matches exactly', 'Contains', 'Start with', 'End with'].map(t => ({
+        label: t, on: s.searchType === t, mark: s.searchType === t ? '✓ ' : '',
+        pick: () => this.setState({ searchType: t }),
+        style: 'display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;transition:background 200ms cubic-bezier(.2,0,.2,1);border:1.5px solid ' + (s.searchType === t ? '#E08542' : 'var(--ns-border-subtle)') + ';background:' + (s.searchType === t ? '#FBEADF' : '#fff') + ';color:' + (s.searchType === t ? '#9C4A14' : 'var(--ns-text-primary)')
+      })),
+      tldChips: ['.com', '.net', '.org', '.info', '.biz', '.co'].map(t => ({
+        label: t, style: chip(s.tlds.indexOf(t) > -1),
+        pick: () => this.setState(p => ({ tlds: p.tlds.indexOf(t) > -1 ? p.tlds.filter(x => x !== t) : p.tlds.concat([t]) }))
+      })),
+      categoryLabel: s.category || 'Select a category',
+      categoryStyle: 'display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:38px;padding:0 10px;border-radius:8px;border:1.5px solid var(--ns-border-subtle);background:#fff;font-size:14px;font-weight:600;cursor:pointer;color:' + (s.category ? 'var(--ns-text-primary)' : 'var(--ns-text-secondary)'),
+      categories: ['Adult', 'Arts', 'Business', 'Clothing and accessories', 'Communication', 'Construction and materials', 'Entertainment', 'Family and friends', 'Finance', 'Food and drink', 'Geo', 'Health', 'Home and garden', 'Locations', 'Other', 'People', 'Pets', 'Plants and animals', 'Science and education', 'Shopping', 'Society', 'Sports', 'Technology', 'Time', 'Transportation'].map(c => ({
+        label: c, style: chip(s.category === c), pick: () => this.setState({ category: c, catOpen: false })
+      })),
+      sources: this.switchList('sources'),
+      listing: this.switchList('listing'),
+      exclusions: this.switchList('exclusions'),
+      sliderRows: [
+        { key: 'order', label: 'Order by', low: 'Today', min: 0, max: 31, step: 1, fmt: v => v === 0 ? 'Today' : (v > 30 ? 'Any' : v + (v === 1 ? ' day' : ' days')) },
+        { key: 'price', label: 'Price', low: '$1', min: 1, max: 9600, step: 100, fmt: v => v > 9500 ? 'Any' : '$' + v.toLocaleString() },
+        { key: 'chars', label: 'Characters', low: '1', min: 1, max: 61, step: 1, fmt: v => v > 60 ? 'Any' : String(v) },
+        { key: 'words', label: 'Words', low: '0', min: 0, max: 6, step: 1, fmt: v => v > 5 ? 'Any' : String(v) }
+      ].map(r => ({
+        label: r.label, low: r.low, min: r.min, max: r.max, step: r.step,
+        value: s.sliders[r.key] == null ? r.max : s.sliders[r.key],
+        display: r.fmt(s.sliders[r.key] == null ? r.max : s.sliders[r.key]),
+        onChange: (e) => { const v = +e.target.value; this.setState(p => ({ sliders: Object.assign({}, p.sliders, { [r.key]: v }) })); }
+      })),
+      reset: () => this.setState({
+        searchType: 'Contains', tlds: ['.com', '.net', '.org'], category: '',
+        sources: { Deleting: true, Expiring: true, 'Private seller': true },
+        listing: { 'Buy it now': true, 'In auction': true, 'Available soon': true, 'Bid or buy': true },
+        exclusions: { 'No hyphens': false, 'No numbers': false, 'No IDNs': false, 'No alpha': false },
+        orderByDate: 'Anytime', event: 'Hotpicks Domains', sortBy: 'Best match',
+        sliders: { order: 31, price: 9600, chars: 61, words: 6 }
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

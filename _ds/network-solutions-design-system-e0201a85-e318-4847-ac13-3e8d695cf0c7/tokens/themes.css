@@ -1,0 +1,12 @@
+/* Inverse context: flip semantic tokens inside dark sections. */
+.ns-on-dark{
+  --ns-text-primary:var(--ns-white);
+  --ns-text-secondary:var(--ns-neutral-300);
+  --ns-text-muted:var(--ns-neutral-400);
+  --ns-text-link:var(--ns-amber-300);
+  --ns-text-link-hover:var(--ns-amber-200);
+  --ns-border-subtle:rgba(255,255,255,.12);
+  --ns-border-default:rgba(255,255,255,.24);
+  --ns-focus-ring:var(--ns-amber-300);
+  --ns-surface-raised:var(--ns-neutral-800);
+}

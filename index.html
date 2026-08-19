@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:var(--ns-surface-page);font-family:var(--ns-font-body);color:var(--ns-text-primary)">
+<div class="ns-promobar" style="background-color:#E08542"><span>Someone already owns the name you want? You can still get it.</span><a href="Aftermarket.dc.html">See how it works</a></div>
+<header style="position:sticky;top:0;z-index:300;background:#fff;border-bottom:1px solid var(--ns-border-subtle)">
+<div class="ns-container" style="display:flex;align-items:center;gap:32px;height:72px">
+<a class="ns-wordmark" href="Aftermarket.dc.html" style="flex-shrink:0"><img src="assets/logo-network-solutions.png" alt="Network Solutions" style="display:block;height:32px;width:auto"></a>
+<nav style="display:flex;gap:20px;flex:1"><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Domains</a><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Websites</a><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Hosting</a><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Email</a><a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Security</a></nav>
+<a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">Support</a>
+<a href="#" style="font-size:14px;font-weight:600;color:var(--ns-text-primary);text-decoration:none">{{ cartLabel }}</a>
+<button class="ns-btn ns-btn--secondary ns-btn--sm">Log in</button>
+<button aria-label="Open dashboard menu" aria-expanded="{{ menuOpen }}" onClick="{{ toggleMenu }}" style="display:flex;flex-direction:column;justify-content:center;gap:4px;width:44px;height:44px;padding:0 10px;border:1.5px solid var(--ns-border-subtle);border-radius:999px;background:#fff;cursor:pointer"><span style="height:2px;background:var(--ns-neutral-900);border-radius:2px"></span><span style="height:2px;background:var(--ns-neutral-900);border-radius:2px"></span><span style="height:2px;background:var(--ns-neutral-900);border-radius:2px"></span></button>
+</div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:400;background:rgba(15,15,17,.5);display:flex;justify-content:flex-end">
+<div role="dialog" aria-label="Dashboard menu" style="width:340px;max-width:88vw;height:100%;overflow:auto;background:#fff;padding:24px;box-shadow:var(--ns-shadow-lg)">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><h2 style="margin:0;font-size:16px;font-weight:700">Your dashboard</h2><button aria-label="Close menu" onClick="{{ toggleMenu }}" style="width:44px;height:44px;border:none;background:transparent;font-size:20px;color:var(--ns-text-secondary);cursor:pointer">×</button></div>
+<nav style="display:flex;flex-direction:column;gap:20px;margin-top:20px">
+<sc-for list="{{ menuGroups }}" as="g" hint-placeholder-count="6">
+<div><h3 style="margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">{{ g.title }}</h3><div style="display:flex;flex-direction:column;gap:6px"><sc-for list="{{ g.items }}" as="i" hint-placeholder-count="3"><a href="#" style="font-size:14px;color:var(--ns-text-primary);text-decoration:none;padding:6px 0">{{ i }}</a></sc-for></div></div>
+</sc-for>
+</nav>
+<a href="#" style="display:inline-flex;margin-top:24px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9C4A14;text-decoration:none">Go to classic view</a>
+</div>
+</div>
+</sc-if>
+
+<section class="ns-on-dark" style="background:var(--ns-neutral-900);padding:36px 0 40px">
+<div class="ns-container">
+<nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ns-neutral-400)"><a href="Aftermarket.dc.html" style="color:var(--ns-neutral-400);text-decoration:none">Aftermarket domains</a><span aria-hidden="true">/</span><span style="color:#fff">{{ crumb }}</span></nav>
+<form class="ns-search" style="margin-top:20px;max-width:760px" onsubmit="return false"><label class="ns-visually-hidden" for="sr-search">Search aftermarket domains</label><input id="sr-search" type="text" value="{{ query }}" onChange="{{ onQuery }}" placeholder="3v.com"><button class="ns-btn ns-btn--accent" type="submit" style="background-color:#E08542">Search</button></form>
+<p style="margin:16px 0 0;font-size:15px;color:var(--ns-neutral-300)">{{ resultLine }}</p>
+</div>
+</section>
+
+<sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+<section style="background:var(--ns-surface-subtle);padding:32px 0 72px">
+<div class="ns-container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:24px;align-items:start">
+
+<div style="border:1px solid var(--ns-border-subtle);border-radius:20px;padding:28px;background:#fff;box-shadow:var(--ns-shadow-xs)">
+<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+<button aria-label="Back to results" onClick="{{ back }}" style="width:44px;height:44px;flex:0 0 auto;border:none;border-radius:999px;background:#FBEADF;color:#9C4A14;font-size:18px;cursor:pointer">←</button>
+<span style="font-size:16px;font-weight:600;color:var(--ns-text-secondary)">{{ d.orderBy }}</span>
+<span style="margin-left:auto;{{ d.statusStyle }}">{{ d.status }}</span>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:start;margin-top:36px">
+<div>
+<h1 style="margin:0;font-family:var(--ns-font-display);font-size:40px;line-height:1;letter-spacing:-.02em">{{ d.name }}</h1>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px"><sc-for list="{{ d.tags }}" as="t" hint-placeholder-count="2"><span style="display:inline-flex;align-items:center;padding:4px 14px;border-radius:999px;border:1px solid #F0CDB4;background:#FDF4EE;font-size:13px;font-weight:600;color:#9C4A14">{{ t }}</span></sc-for></div>
+<div style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:8px 16px;border:1.5px solid var(--ns-border-subtle);border-radius:12px;font-size:15px;font-weight:700">{{ d.biddersLine }}</div>
+</div>
+<div style="text-align:right">
+<div style="display:flex;align-items:center;gap:12px;justify-content:flex-end">
+<label for="maxbid" style="font-size:16px;font-weight:600;color:var(--ns-text-secondary)">{{ d.bidLabel }}</label>
+<div style="display:flex;align-items:center;gap:8px;border:1.5px solid var(--ns-border-subtle);border-radius:10px;padding:6px 12px;background:#fff">
+<span style="font-family:var(--ns-font-display);font-size:26px;font-weight:600;color:#9C4A14">$</span>
+<input id="maxbid" type="text" value="{{ bidText }}" onChange="{{ onBid }}" inputmode="numeric" style="width:112px;border:none;outline:none;background:transparent;font-family:var(--ns-font-display);font-size:26px;font-weight:600;color:#9C4A14;height:40px">
+<div style="display:flex;flex-direction:column;gap:2px"><button aria-label="Increase bid" onClick="{{ bidUp }}" style="width:30px;height:22px;border:none;background:transparent;color:var(--ns-text-primary);font-size:14px;cursor:pointer">↑</button><button aria-label="Decrease bid" onClick="{{ bidDown }}" style="width:30px;height:22px;border:none;background:transparent;color:var(--ns-text-primary);font-size:14px;cursor:pointer">↓</button></div>
+</div>
+</div>
+<button class="ns-btn" style="margin-top:24px;background-color:#E08542;color:#fff;border-color:#E08542" onClick="{{ addToCart }}">{{ cartCta }}</button>
+<div style="margin-top:12px"><button onClick="{{ toggleProxy }}" style="border:none;background:transparent;padding:0;font-size:13px;font-weight:600;color:#9C4A14;cursor:pointer;text-decoration:underline">{{ proxyLabel }}</button></div>
+</div>
+</div>
+<sc-if value="{{ proxyOpen }}" hint-placeholder-val="{{ false }}">
+<p style="margin:16px 0 0;padding:14px 16px;border-radius:12px;background:#FBEADF;font-size:13px;line-height:1.55;color:#7A3A10">Proxy bidding raises your bid automatically, starting at the lowest possible amount and going up only as far as it needs to beat competing bids — never past your maximum.</p>
+</sc-if>
+<div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--ns-border-subtle)">
+<button onClick="{{ toggleNotif }}" aria-expanded="{{ notifOpen }}" style="display:inline-flex;align-items:center;gap:10px;border:none;background:transparent;padding:0;font-size:16px;font-weight:600;color:var(--ns-text-primary);cursor:pointer"><span aria-hidden="true" style="display:inline-block;width:16px;height:24px;border:2px solid var(--ns-text-secondary);border-radius:4px"></span>Notifications</button>
+<sc-if value="{{ notifOpen }}" hint-placeholder-val="{{ false }}">
+<div style="margin-top:16px">
+<p style="margin:0 0 14px;font-size:13px;line-height:1.5;color:var(--ns-text-secondary)">Choose what we tell you about this name. Your account-wide settings can override these.</p>
+<div style="display:flex;flex-direction:column;gap:14px;max-width:420px"><sc-for list="{{ notes }}" as="n" hint-placeholder-count="3"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px"><span>{{ n.label }}</span><button aria-pressed="{{ n.on }}" aria-label="{{ n.label }}" style="{{ n.track }}" onClick="{{ n.toggle }}"><span style="{{ n.knob }}"></span></button></div></sc-for></div>
+<p style="margin:16px 0 0;font-size:12px;line-height:1.5;color:var(--ns-text-secondary)">For text alerts, add a device in the mobile app or add an SMS number on the Notifications page.</p>
+</div>
+</sc-if>
+</div>
+</div>
+
+<div style="border:1px solid var(--ns-border-subtle);border-radius:20px;padding:28px;background:#fff;box-shadow:var(--ns-shadow-xs)">
+<div style="display:flex;align-items:center;gap:8px"><span class="ns-eyebrow" style="color:#C4611F">Domain score</span><span title="AI-generated, informational only" style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1px solid var(--ns-border-subtle);border-radius:999px;font-size:11px;font-weight:700;color:var(--ns-text-secondary)">i</span></div>
+<h2 style="margin:6px 0 0;font-size:20px;font-weight:700">Brandability snapshot</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:20px">
+<sc-for list="{{ d.scores }}" as="s" hint-placeholder-count="6">
+<div style="display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;background:var(--ns-surface-subtle)">
+<div style="{{ s.ring }}"><span style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:999px;background:#fff;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums">{{ s.value }}</span></div>
+<span style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ns-text-secondary)">{{ s.label }}</span>
+</div>
+</sc-for>
+</div>
+<p style="margin:16px 0 0;font-size:12px;line-height:1.5;color:var(--ns-text-secondary)">Domain insights on this page are AI-generated and provided for information only.</p>
+</div>
+
+<div style="border:1px solid var(--ns-border-subtle);border-radius:20px;padding:28px;background:#fff;box-shadow:var(--ns-shadow-xs)">
+<span class="ns-eyebrow" style="color:#C4611F">Domain details</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:18px">
+<sc-for list="{{ d.details }}" as="row" hint-placeholder-count="4">
+<div style="padding:20px 16px;border-radius:16px;background:var(--ns-surface-subtle);text-align:center">
+<div style="font-size:15px;font-weight:700">{{ row.label }}</div>
+<div style="margin-top:10px;font-size:14px;color:var(--ns-text-secondary)">{{ row.value }}</div>
+<sc-if value="{{ row.link }}" hint-placeholder-val="{{ false }}"><a href="#" style="display:inline-flex;margin-top:8px;font-size:13px;font-weight:600;color:#9C4A14">{{ row.link }}</a></sc-if>
+</div>
+</sc-for>
+</div>
+<p style="margin:16px 0 0;font-size:12px;line-height:1.5;color:var(--ns-text-secondary)">EstiBot valuation data is provided by Intelium Corp. It is an estimate, not a guarantee of value.</p>
+</div>
+
+<div style="border:1px solid var(--ns-border-subtle);border-radius:20px;padding:28px;background:#fff;box-shadow:var(--ns-shadow-xs)">
+<div style="display:flex;align-items:center;gap:8px"><span class="ns-eyebrow" style="color:#C4611F">Highlights</span><span title="AI-generated, informational only" style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1px solid var(--ns-border-subtle);border-radius:999px;font-size:11px;font-weight:700;color:var(--ns-text-secondary)">i</span></div>
+<h2 style="margin:6px 0 0;font-size:20px;font-weight:700">Why this domain works</h2>
+<ol style="margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px">
+<sc-for list="{{ d.highlights }}" as="h" hint-placeholder-count="6">
+<li style="display:flex;align-items:center;gap:14px;font-size:15px"><span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;flex:0 0 auto;border-radius:999px;background:#FBEADF;color:#9C4A14;font-size:13px;font-weight:700">{{ h.n }}</span>{{ h.text }}</li>
+</sc-for>
+</ol>
+</div>
+
+</div>
+
+<div class="ns-container" style="margin-top:24px">
+<div style="border:1px solid var(--ns-border-subtle);border-radius:20px;padding:28px;background:#fff;box-shadow:var(--ns-shadow-xs)">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><span class="ns-eyebrow" style="color:#C4611F">Similar options</span><h2 style="margin:4px 0 0;font-size:20px;font-weight:700">You may also like</h2></div><a class="ns-link-arrow" style="color:#9C4A14" href="#" onClick="{{ back }}">More</a></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:20px">
+<sc-for list="{{ alsoLike }}" as="a" hint-placeholder-count="5">
+<div style="border:1px solid var(--ns-border-subtle);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px">
+<button onClick="{{ a.open }}" style="border:none;background:transparent;padding:0;text-align:left;font-family:var(--ns-font-display);font-size:16px;font-weight:600;color:var(--ns-text-primary);cursor:pointer;overflow:hidden;text-overflow:ellipsis">{{ a.name }}</button>
+<span style="align-self:flex-start;{{ a.statusStyle }}">{{ a.status }}</span>
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-top:auto"><span style="font-size:12px;color:var(--ns-text-secondary)">{{ a.biddersLine }}</span><span style="font-weight:700;font-variant-numeric:tabular-nums">{{ a.price }}</span></div>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isResults }}" hint-placeholder-val="{{ true }}">
+<section style="padding:32px 0 72px">
+<div class="ns-container" style="display:grid;grid-template-columns:296px minmax(0,1fr);gap:32px;align-items:start">
+
+<aside style="position:sticky;top:96px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px"><h2 style="margin:0;font-size:16px;font-weight:700">Refine</h2><button onClick="{{ reset }}" style="border:none;background:transparent;padding:0;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9C4A14;cursor:pointer">Reset</button></div>
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px">
+<h5 style="margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Show</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ scopes }}" as="t" hint-placeholder-count="4"><button style="{{ t.style }}" onClick="{{ t.pick }}">{{ t.label }}</button></sc-for></div>
+</div>
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px">
+<h5 style="margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Extensions</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ tldChips }}" as="t" hint-placeholder-count="4"><button style="{{ t.style }}" onClick="{{ t.pick }}">{{ t.label }}</button></sc-for></div>
+</div>
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px">
+<h5 style="margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Max price</h5>
+<div style="display:flex;justify-content:space-between;font-size:13px;color:var(--ns-text-secondary)"><span>$0</span><span style="font-weight:600;color:var(--ns-text-primary)">{{ priceDisplay }}</span></div>
+<input type="range" min="20" max="200" step="10" value="{{ maxPrice }}" onChange="{{ onPrice }}" aria-label="Max price" style="width:100%;margin-top:10px;accent-color:#E08542;height:4px">
+</div>
+
+<div style="background:var(--ns-surface-subtle);border-radius:14px;padding:16px">
+<h5 style="margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ns-text-secondary)">Listing type</h5>
+<p style="margin:0 0 12px;font-size:12px;line-height:1.45;color:var(--ns-text-secondary)">Buy it now is a fixed price. In auction is bidding right now. Available soon opens in the next thirty days.</p>
+<div style="display:flex;flex-direction:column;gap:12px"><sc-for list="{{ listing }}" as="s" hint-placeholder-count="4"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px"><span>{{ s.label }}</span><button aria-pressed="{{ s.on }}" aria-label="{{ s.label }}" style="{{ s.track }}" onClick="{{ s.toggle }}"><span style="{{ s.knob }}"></span></button></div></sc-for></div>
+</div>
+
+<div style="border:1px solid var(--ns-border-subtle);border-radius:14px;padding:16px;background:#fff;box-shadow:var(--ns-shadow-xs)">
+<h5 style="margin:0 0 8px;font-size:14px;font-weight:700">Can't find it?</h5>
+<p style="margin:0 0 14px;font-size:13px;line-height:1.5;color:var(--ns-text-secondary)">Our brokers can approach the owner of any registered name on your behalf.</p>
+<a class="ns-link-arrow" style="color:#9C4A14" href="Aftermarket.dc.html#certified">Start a certified offer</a>
+</div>
+</aside>
+
+<div>
+<div style="border:1px solid #E08542;border-radius:20px;padding:24px;background:#FBEADF">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px">
+<span style="display:inline-flex;align-items:center;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#9C4A14;color:#fff">Exact match</span>
+<span style="font-family:var(--ns-font-display);font-weight:600;font-size:26px;letter-spacing:-.02em">{{ exact.name }}</span>
+<span style="font-size:13px;color:#7A3A10">{{ exact.summary }}</span>
+<div style="margin-left:auto;text-align:right"><div style="font-family:var(--ns-font-display);font-weight:700;font-size:26px;color:#9C4A14">{{ exact.price }}</div><div style="font-size:12px;color:#7A3A10">{{ exact.priceNote }}</div></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px">
+<button class="ns-btn" style="background-color:#E08542;color:#fff;border-color:#E08542" onClick="{{ exact.open }}">Bid on this name</button>
+<button class="ns-btn ns-btn--secondary" onClick="{{ exact.open }}">View details</button>
+<span style="align-self:center;font-size:13px;color:#7A3A10">{{ exact.clock }}</span>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:32px">
+<h2 style="margin:0;font-size:20px;font-weight:700">Similar options</h2>
+<span style="font-size:14px;color:var(--ns-text-secondary)">{{ countLine }}</span>
+<label style="margin-left:auto;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600">Sort by<select value="{{ sort }}" onChange="{{ onSort }}" style="min-height:40px;padding:0 12px;border-radius:8px;border:1.5px solid var(--ns-border-subtle);background:#fff;font-size:14px"><option value="Best match">Best match</option><option value="Price — low to high">Price — low to high</option><option value="Price — high to low">Price — high to low</option><option value="Most bidders">Most bidders</option><option value="Domain name — A to Z">Domain name — A to Z</option></select></label>
+</div>
+
+<ul style="list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ rows }}" as="r" hint-placeholder-count="10">
+<li style="display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) auto;gap:16px;align-items:center;padding:16px 20px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;box-shadow:var(--ns-shadow-xs)">
+<div style="min-width:0">
+<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><button onClick="{{ r.open }}" style="border:none;background:transparent;padding:0;font-family:var(--ns-font-display);font-weight:600;font-size:18px;letter-spacing:-.01em;color:var(--ns-text-primary);cursor:pointer">{{ r.name }}</button><span style="{{ r.statusStyle }}">{{ r.status }}</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:6px;font-size:13px;color:var(--ns-text-secondary)"><span>{{ r.cat }}</span><span>{{ r.clock }}</span><span>{{ r.biddersLine }}</span></div>
+</div>
+<div><div style="font-weight:700;font-size:17px;font-variant-numeric:tabular-nums">{{ r.price }}</div><div style="font-size:12px;color:var(--ns-text-secondary)">{{ r.priceNote }}</div></div>
+<div style="display:flex;align-items:center;gap:10px">
+<button style="{{ r.watchStyle }}" onClick="{{ r.onWatch }}" aria-pressed="{{ r.watched }}">{{ r.watchLabel }}</button>
+<button class="ns-btn ns-btn--sm" style="background-color:#E08542;color:#fff;border-color:#E08542" onClick="{{ r.open }}">{{ r.action }}</button>
+</div>
+</li>
+</sc-for>
+</ul>
+
+<sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+<div style="margin-top:16px;padding:32px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:#fff;text-align:center">
+<p style="margin:0 0 16px;font-size:15px;color:var(--ns-text-secondary)">No listings match these filters. Raise the max price or turn a listing type back on.</p>
+<button class="ns-btn ns-btn--secondary" onClick="{{ reset }}">Reset filters</button>
+</div>
+</sc-if>
+
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:28px">
+<div style="display:flex;align-items:center;gap:8px"><button class="ns-btn ns-btn--secondary ns-btn--sm" onClick="{{ prev }}">Previous</button><sc-for list="{{ pages }}" as="p" hint-placeholder-count="3"><button style="{{ p.style }}" onClick="{{ p.pick }}">{{ p.label }}</button></sc-for><button class="ns-btn ns-btn--secondary ns-btn--sm" onClick="{{ next }}">Next</button></div>
+<label style="margin-left:auto;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600">Per page<select value="{{ perPage }}" onChange="{{ onPerPage }}" style="min-height:40px;padding:0 12px;border-radius:8px;border:1.5px solid var(--ns-border-subtle);background:#fff;font-size:14px"><option value="10">10</option><option value="25">25</option><option value="50">50</option></select></label>
+</div>
+</div>
+
+</div>
+</section>
+</sc-if>
+
+<section class="ns-on-dark" style="background:var(--ns-neutral-900);padding:64px 0">
+<div class="ns-container" style="display:flex;flex-wrap:wrap;align-items:center;gap:24px;justify-content:space-between">
+<div><h2 style="margin:0;font-size:var(--ns-text-h2);color:#fff">{{ alertTitle }}</h2><p style="margin:10px 0 0;font-size:16px;color:var(--ns-neutral-300);max-width:560px">We'll email you the moment the auction opens, a competing bid lands, or the price drops.</p></div>
+<button class="ns-btn ns-btn--accent" style="background-color:#E08542">Create alert</button>
+</div>
+</section>
+
+<section style="background:#fff;padding:72px 0;border-top:1px solid var(--ns-border-subtle)">
+<div class="ns-container">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px">
+<div style="max-width:620px">
+<span class="ns-eyebrow" style="color:#C4611F">AI tools</span>
+<h2 style="margin:6px 0 0;font-family:var(--ns-font-display);font-size:var(--ns-text-h2);line-height:1.15;letter-spacing:-.02em">Win the name, then launch the brand</h2>
+<p style="margin:12px 0 0;font-size:16px;line-height:1.65;color:var(--ns-text-secondary)">{{ upsellLead }}</p>
+</div>
+<div style="text-align:right"><div style="font-size:13px;color:var(--ns-text-secondary)">Bundle total</div><div style="font-family:var(--ns-font-display);font-size:30px;font-weight:700;color:#9C4A14">{{ upsellTotal }}</div><div style="font-size:12px;color:var(--ns-text-secondary)">{{ upsellCountLabel }}</div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:32px">
+<sc-for list="{{ upsells }}" as="u" hint-placeholder-count="3">
+<article style="{{ u.card }}">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<span style="{{ u.tagStyle }}">{{ u.tag }}</span>
+<sc-if value="{{ u.picked }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9C4A14">Added</span></sc-if>
+</div>
+<h3 style="margin:16px 0 0;font-family:var(--ns-font-display);font-size:22px;font-weight:600;letter-spacing:-.01em">{{ u.title }}</h3>
+<p style="margin:10px 0 0;font-size:14px;line-height:1.6;color:var(--ns-text-secondary)">{{ u.body }}</p>
+<div style="margin:18px 0 0;padding:14px 16px;border-radius:12px;background:var(--ns-surface-subtle);font-size:13px;line-height:1.5"><span style="font-weight:700">Preview:</span> {{ u.sample }}</div>
+<ul style="list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ u.points }}" as="p" hint-placeholder-count="3"><li style="display:flex;gap:10px;font-size:14px;color:var(--ns-text-secondary)"><span aria-hidden="true" style="color:#E08542;font-weight:700">✓</span>{{ p }}</li></sc-for>
+</ul>
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;padding-top:22px">
+<div><div style="font-size:20px;font-weight:700">{{ u.price }}</div><div style="font-size:12px;color:var(--ns-text-secondary)">{{ u.priceNote }}</div></div>
+<button style="{{ u.ctaStyle }}" onClick="{{ u.pick }}" aria-pressed="{{ u.picked }}">{{ u.cta }}</button>
+</div>
+</article>
+</sc-for>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:24px;padding:20px 24px;border:1px solid var(--ns-border-subtle);border-radius:16px;background:var(--ns-surface-subtle)">
+<p style="margin:0;font-size:14px;line-height:1.55;color:var(--ns-text-secondary);max-width:620px">{{ upsellFootnote }}</p>
+<div style="margin-left:auto;display:flex;gap:12px"><button class="ns-btn" style="background-color:#E08542;color:#fff;border-color:#E08542" onClick="{{ addBundle }}">{{ bundleCta }}</button><a class="ns-link-arrow" style="color:#9C4A14;align-self:center" href="#">Compare all AI tools</a></div>
+</div>
+</div>
+</section>
+
+<footer style="background:var(--ns-neutral-900);color:var(--ns-neutral-300);padding:64px 0 40px">
+<div class="ns-container">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px">
+<sc-for list="{{ footerCols }}" as="c" hint-placeholder-count="4">
+<div><h3 style="margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff">{{ c.title }}</h3><div style="display:flex;flex-direction:column;gap:10px"><sc-for list="{{ c.items }}" as="i" hint-placeholder-count="4"><a href="#" style="font-size:14px;color:var(--ns-neutral-300);text-decoration:none">{{ i }}</a></sc-for></div></div>
+</sc-for>
+</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)">
+<div style="display:flex;gap:16px"><a href="#" style="font-size:13px;color:var(--ns-neutral-300);text-decoration:none">Facebook</a><a href="#" style="font-size:13px;color:var(--ns-neutral-300);text-decoration:none">X</a></div>
+<span style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid rgba(255,255,255,.24);border-radius:999px;font-size:12px;color:#fff">Secured by Sectigo Trust</span>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:20px;font-size:12px"><a href="#" style="color:var(--ns-neutral-400);text-decoration:none">Legal</a><a href="#" style="color:var(--ns-neutral-400);text-decoration:none">Privacy policy</a><a href="#" style="color:var(--ns-neutral-400);text-decoration:none">Terms of use</a><a href="#" style="color:var(--ns-neutral-400);text-decoration:none">Do not sell my personal information</a></div>
+<p style="margin:16px 0 0;font-size:12px;line-height:1.6;color:var(--ns-neutral-400);max-width:860px">© SnapNames. All rights reserved. All registered trademarks are the property of their respective owners. U.S. Patent Nos. 7,418,471; 7,752,260; 7,606,858; 7,490,124; 7,627,628; 7,472,160; 7,904,898. Canadian Patent Nos. 2,429,364; 2,427,266; 2,467,644. Chinese Patent Nos. ZL01818156.2; ZL01818157.0.</p>
+</div>
+</footer>
+
+<sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:500;background:rgba(15,15,17,.5);display:flex;align-items:center;justify-content:center;padding:24px">
+<div role="dialog" aria-label="Place your bid" style="width:100%;max-width:460px;background:#fff;border-radius:24px;padding:28px;box-shadow:var(--ns-shadow-lg)">
+<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px"><h3 style="margin:0;font-size:var(--ns-text-h4);font-family:var(--ns-font-display)">{{ modalTitle }}</h3><button aria-label="Close" onClick="{{ closeModal }}" style="width:44px;height:44px;border:none;background:transparent;font-size:20px;color:var(--ns-text-secondary);cursor:pointer">×</button></div>
+
+<sc-if value="{{ modalForm }}" hint-placeholder-val="{{ true }}">
+<div>
+<label for="modalbid" style="display:block;margin:20px 0 8px;font-size:14px;font-weight:700">Bid amount</label>
+<div style="display:flex;gap:8px">
+<div style="flex:1;display:flex;align-items:center;gap:6px;background:#fff;border:1.5px solid #E08542;border-radius:8px;padding:0 12px"><span style="font-size:16px;font-weight:700;color:var(--ns-text-secondary)">$</span><input id="modalbid" type="text" value="{{ bidText }}" onChange="{{ onBid }}" inputmode="numeric" style="flex:1;min-width:0;border:none;outline:none;background:transparent;font-family:var(--ns-font-body);font-size:17px;font-weight:700;height:46px"></div>
+<div style="display:flex;flex-direction:column;gap:4px"><button aria-label="Increase bid" onClick="{{ bidUp }}" style="width:46px;height:21px;border:1.5px solid #E08542;border-radius:6px;background:#fff;color:#9C4A14;cursor:pointer">▲</button><button aria-label="Decrease bid" onClick="{{ bidDown }}" style="width:46px;height:21px;border:1.5px solid #E08542;border-radius:6px;background:#fff;color:#9C4A14;cursor:pointer">▼</button></div>
+</div>
+<div style="display:flex;justify-content:space-between;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid var(--ns-border-subtle);font-size:14px"><span style="color:var(--ns-text-secondary)">Price</span><span style="font-weight:700">{{ d.price }}</span></div>
+<p style="margin:14px 0 0;font-size:13px;line-height:1.55;color:var(--ns-text-secondary)">You can order this name straight from here. Anything else in your cart stays untouched.</p>
+<div style="display:flex;gap:10px;margin-top:20px"><button class="ns-btn" style="flex:1;justify-content:center;background-color:#E08542;color:#fff;border-color:#E08542" onClick="{{ placeOrder }}">Place order</button><button class="ns-btn ns-btn--secondary" style="flex:1;justify-content:center" onClick="{{ confirmCart }}">Add to cart</button></div>
+</div>
+</sc-if>
+
+<sc-if value="{{ modalPending }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;align-items:center;gap:12px;padding:28px 0;font-size:15px;color:var(--ns-text-secondary)"><span style="width:20px;height:20px;border:2px solid var(--ns-border-subtle);border-top-color:#E08542;border-radius:999px;display:inline-block"></span>Please wait — we're confirming with the auction.</div>
+</sc-if>
+
+<sc-if value="{{ modalDone }}" hint-placeholder-val="{{ false }}">
+<div>
+<p style="margin:20px 0 0;font-size:15px;line-height:1.6">{{ modalDoneText }}</p>
+<div style="display:flex;gap:10px;margin-top:20px"><button class="ns-btn" style="flex:1;justify-content:center;background-color:#E08542;color:#fff;border-color:#E08542" onClick="{{ closeModal }}">View my orders</button><button class="ns-btn ns-btn--secondary" style="flex:1;justify-content:center" onClick="{{ closeModal }}">Continue shopping</button></div>
+</div>
+</sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ tipOpen }}" hint-placeholder-val="{{ true }}">
+<div style="position:fixed;right:24px;bottom:24px;z-index:450;width:320px;background:#fff;border:1px solid var(--ns-border-subtle);border-radius:20px;padding:20px;box-shadow:var(--ns-shadow-lg)">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><h3 style="margin:0;font-size:15px;font-weight:700">Tip</h3><button aria-label="Close tip" onClick="{{ closeTip }}" style="width:32px;height:32px;border:none;background:transparent;font-size:18px;color:var(--ns-text-secondary);cursor:pointer">×</button></div>
+<p style="margin:10px 0 0;font-size:13px;line-height:1.55;color:var(--ns-text-secondary)">Set your max bid once. Proxy bidding does the rest — it only raises your bid as far as it needs to.</p>
+<button onClick="{{ closeTip }}" style="margin-top:14px;border:none;background:transparent;padding:0;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9C4A14;cursor:pointer">Don't show tips again</button>
+</div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:1400}}">
+const PILL = {
+  'In auction': 'background:#FBEADF;color:#9C4A14',
+  'Buy it now': 'background:var(--ns-surface-subtle);border:1px solid var(--ns-border-subtle);color:var(--ns-text-secondary)',
+  'Available soon': 'background:#E9EEFC;color:#26489C',
+  'Bid or buy': 'background:#EEF7D6;color:#4C5A0B'
+};
+const SOURCES = ['Ascio Technologies (R)', 'Network Solutions (R)', 'Register.com (R)', 'Private seller', 'Pending delete'];
+const D = (name, cat, price, status, bidders, clock, age, esti, score, tags) =>
+  ({ name, tld: '.' + name.split('.').pop(), cat, price, status, bidders, clock, age, esti, score, tags });
+
+const EXACT = D('3v.com', 'Other', 69, 'Available soon', 161, 'Order by 19-Aug-2026, 9:00 PM PDT', '28y 0m', 162897, 30, ['Tech', 'Brand']);
+
+const DATA = [
+  D('salsacentral.com', 'Entertainment', 39, 'In auction', 7, 'Ends in 6h 03m', '19y 4m', 3120, 61, ['Food', 'Media']),
+  D('artsfly.com', 'Arts', 59, 'In auction', 23, 'Ends in 11h 47m', '14y 8m', 2480, 64, ['Arts', 'Brand']),
+  D('greeno.com', 'Other', 69, 'In auction', 9, 'Ends in 1d 19h', '22y 1m', 18400, 78, ['Brand', 'Green']),
+  D('tenes.com', 'Other', 69, 'In auction', 18, 'Ends in 2d 02h', '24y 7m', 21300, 76, ['Brand', 'Short']),
+  D('voiceads.com', 'Communication', 69, 'In auction', 5, 'Ends in 3h 38m', '17y 2m', 9600, 72, ['Adtech', 'Voice']),
+  D('bizports.com', 'Business', 69, 'Bid or buy', 11, 'Ends in 8h 21m', '20y 9m', 4300, 66, ['Business', 'SaaS']),
+  D('topanimations.com', 'Entertainment', 69, 'In auction', 2, 'Ends in 14h 55m', '15y 5m', 1900, 58, ['Media', 'Design']),
+  D('maritimeweb.com', 'Transportation', 69, 'In auction', 27, 'Ends in 2d 11h', '21y 3m', 5200, 65, ['Shipping', 'Trade']),
+  D('spinsisters.com', 'Entertainment', 69, 'In auction', 6, 'Ends in 4h 09m', '18y 6m', 2600, 60, ['Fitness', 'Brand']),
+  D('wildbazaar.com', 'Shopping', 69, 'Bid or buy', 15, 'Ends in 1d 08h', '16y 0m', 3400, 68, ['Retail', 'Brand']),
+  D('travelplanning.net', 'Geo', 79, 'Available soon', 14, 'Order by 21-Aug-2026, 9:00 PM PDT', '23y 2m', 7800, 70, ['Travel', 'Keyword']),
+  D('viewphones.com', 'Communication', 79, 'Available soon', 7, 'Order by 23-Aug-2026, 9:00 PM PDT', '19y 11m', 3900, 63, ['Mobile', 'Retail']),
+  D('fltd.com', 'Other', 79, 'In auction', 23, 'Ends in 11h 47m', '25y 4m', 24800, 74, ['Short', 'Acronym']),
+  D('knbl.com', 'Other', 79, 'In auction', 3, 'Ends in 1d 04h', '26y 8m', 26100, 73, ['Short', 'Acronym']),
+  D('generalcamera.com', 'Technology', 79, 'Available soon', 18, 'Order by 27-Aug-2026, 9:00 PM PDT', '20y 2m', 4600, 64, ['Photo', 'Retail']),
+  D('skiarea.net', 'Sports', 79, 'In auction', 5, 'Ends in 3h 38m', '18y 1m', 2900, 59, ['Sports', 'Travel']),
+  D('valueseek.com', 'Business', 79, 'In auction', 27, 'Ends in 2d 11h', '21y 7m', 5400, 69, ['Finance', 'Brand']),
+  D('boogiecheck.com', 'Entertainment', 79, 'Available soon', 2, 'Order by 04-Sep-2026, 9:00 PM PDT', '14y 3m', 1700, 55, ['Music', 'Brand']),
+  D('webgui.net', 'Technology', 69, 'Buy it now', 0, 'Available now', '17y 9m', 3100, 62, ['Dev', 'Design']),
+  D('onestopwireless.com', 'Communication', 69, 'Buy it now', 0, 'Available now', '19y 0m', 4100, 61, ['Mobile', 'Retail']),
+  D('jrcatering.com', 'Food and drink', 69, 'Buy it now', 0, 'Available now', '16y 5m', 2200, 57, ['Food', 'Local']),
+  D('divashot.com', 'People', 69, 'Buy it now', 0, 'Available now', '15y 8m', 1800, 56, ['Photo', 'Brand']),
+  D('bstq.com', 'Other', 160, 'Buy it now', 0, 'Available now', '24y 0m', 22700, 75, ['Short', 'Acronym'])
+];
+const ALL = [EXACT].concat(DATA);
+const TLDS = ['.com', '.net'];
+const SCOPES = ['All similar', 'Same extension', 'Short names', 'Same category'];
+const SCORE_LABELS = ['Brandability', 'Global appeal', 'Industry fit', 'Memorability', 'Pronunciation', 'Visual appeal'];
+const SCORE_OFFSET = [0, 10, 0, 0, -5, 20];
+
+class Component extends DCLogic {
+  state = {
+    query: '3v.com', view: 'results', detail: null,
+    scope: 'All similar', tlds: [], maxPrice: 200, off: [], sort: 'Best match',
+    perPage: 10, page: 1, watch: [], cart: [], bid: null, proxyOpen: false, notesOff: [],
+    menuOpen: false, modal: null, tipOpen: true, notifOpen: false, addons: []
+  };
+
+  chip(active) {
+    return 'display:inline-flex;align-items:center;min-height:34px;padding:0 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;transition:background 200ms cubic-bezier(.2,0,.2,1);' +
+      (active ? 'background:#E08542;border:1.5px solid #E08542;color:#fff' : 'background:#fff;border:1.5px solid var(--ns-border-subtle);color:var(--ns-text-primary)');
+  }
+  money(n) { return '$' + n.toLocaleString('en-US') + '.00'; }
+  pill(status) {
+    return 'display:inline-flex;align-items:center;white-space:nowrap;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;' + PILL[status];
+  }
+  priceNote(d) {
+    return d.status === 'Buy it now' ? 'Buy it now price' : d.status === 'Available soon' ? 'Opening bid' : 'Current bid';
+  }
+  toggleRow(key, label) {
+    const on = !this.state[key].includes(label);
+    return {
+      label, on,
+      track: 'position:relative;width:44px;height:24px;flex:0 0 auto;border:none;border-radius:999px;cursor:pointer;transition:background 200ms cubic-bezier(.2,0,.2,1);background:' + (on ? '#E08542' : '#D3D3D8'),
+      knob: 'position:absolute;top:3px;left:' + (on ? '23px' : '3px') + ';width:18px;height:18px;border-radius:999px;background:#fff;transition:left 200ms cubic-bezier(.2,0,.2,1)',
+      toggle: () => this.setState(st => ({
+        [key]: st[key].includes(label) ? st[key].filter(x => x !== label) : st[key].concat(label), page: 1
+      }))
+    };
+  }
+  open(d) { this.setState({ view: 'detail', detail: d.name, bid: d.price, proxyOpen: false, notifOpen: false }); }
+
+  filtered() {
+    const s = this.state;
+    let list = DATA.filter(d =>
+      (!s.tlds.length || s.tlds.includes(d.tld)) && d.price <= s.maxPrice && !s.off.includes(d.status)
+    );
+    if (s.scope === 'Same extension') list = list.filter(d => d.tld === EXACT.tld);
+    if (s.scope === 'Short names') list = list.filter(d => d.name.split('.')[0].length <= 6);
+    if (s.scope === 'Same category') list = list.filter(d => d.cat === EXACT.cat);
+    const by = {
+      'Price — low to high': (a, b) => a.price - b.price,
+      'Price — high to low': (a, b) => b.price - a.price,
+      'Most bidders': (a, b) => b.bidders - a.bidders,
+      'Domain name — A to Z': (a, b) => a.name.localeCompare(b.name)
+    }[s.sort];
+    return by ? list.slice().sort(by) : list;
+  }
+
+  detailVals(d) {
+    const stem = d.name.split('.')[0];
+    const scores = SCORE_LABELS.map((label, i) => {
+      const value = Math.max(20, Math.min(96, d.score + SCORE_OFFSET[i]));
+      return {
+        label, value,
+        ring: 'position:relative;flex:0 0 auto;width:52px;height:52px;padding:5px;border-radius:999px;background:conic-gradient(#E08542 0 ' + value + '%, #E3E3E7 ' + value + '% 100%)'
+      };
+    });
+    const highlights = stem.length <= 4 ? [
+      'Extremely short and concise domain name',
+      'Easy to type and remember',
+      'Strong for numeric and letter branding',
+      'Simple and visually clean',
+      'Works in any language or market',
+      d.age + ' of registration history behind it'
+    ] : [
+      'Reads as one clear phrase — nothing to spell out',
+      'Plain-language fit for ' + d.cat.toLowerCase(),
+      d.tld === '.com' ? 'The .com, so no redirect from a stronger owner' : 'Established ' + d.tld + ' with ' + d.age + ' of history',
+      'Registered ' + d.age + ' ago with clean whois history',
+      d.bidders > 10 ? d.bidders + ' bidders already tracking it' : 'Low competition so far',
+      'Professional and trustworthy tone'
+    ];
+    return {
+      name: d.name, cat: d.cat, clock: d.clock, status: d.status, tags: d.tags,
+      biddersLine: (d.bidders || 'No') + ' bidders',
+      statusStyle: this.pill(d.status),
+      orderBy: d.status === 'Available soon' ? d.clock : d.status === 'Buy it now' ? 'Available now — fixed price' : 'Auction closes ' + d.clock.replace('Ends in ', 'in '),
+      bidLabel: d.status === 'Buy it now' ? 'Price:' : 'Your max bid:',
+      price: this.money(d.price), priceNote: this.priceNote(d), score: d.score, scores,
+      highlights: highlights.map((text, i) => ({ n: i + 1, text })),
+      details: [
+        { label: 'Registrar info', value: 'Owner of record at Network Solutions', link: 'whois' },
+        { label: 'Source', value: d.name === '3v.com' ? 'Ascio Technologies (R)' : SOURCES[stem.length % SOURCES.length], link: '' },
+        { label: 'Age', value: d.age, link: '' },
+        { label: 'EstiBot valuation', value: d.esti.toLocaleString('en-US') + ' USD', link: 'More information' }
+      ]
+    };
+  }
+
+  upsellVals(cur) {
+    const s = this.state;
+    const stem = cur.name.split('.')[0];
+    const cap = stem.charAt(0).toUpperCase() + stem.slice(1);
+    const defs = [
+      {
+        id: 'brand', tag: 'Business Name Generator', title: 'Name the business behind the domain',
+        body: 'Feeds ' + cur.name + ' into the generator and returns legal-name and trading-name options that still read as one brand.',
+        sample: cap + ' Studio · ' + cap + ' Labs · The ' + cap + ' Company',
+        points: ['Checks social handles at the same time', 'Files-ready spelling and tagline pairs', 'Unlimited regenerations for 30 days'],
+        price: '$0', priceNote: 'Free with any aftermarket purchase'
+      },
+      {
+        id: 'logo', tag: 'Logo Maker', title: 'A mark that fits ' + cur.name,
+        body: 'Generates a wordmark from the name itself, plus favicon, social avatar, and email-signature crops.',
+        sample: 'Wordmark, monogram, and stacked lockup in three palettes',
+        points: ['SVG and PNG in light and dark', 'Favicon and app-icon sizes included', 'One revision round with a designer'],
+        price: '$14.99', priceNote: 'One-time'
+      },
+      {
+        id: 'pack', tag: 'AI All-Access Pack', title: 'ChatGPT, Claude, Gemini, and Grok',
+        body: 'All four assistants on one login and one bill, alongside the AI Website Builder and Domain Advisor.',
+        sample: 'Draft the homepage copy for ' + cur.name + ' → live page in minutes',
+        points: ['One bill instead of four', 'AI Website Builder and Site Health Advisor', 'Cancel any time'],
+        price: '$20.00/mo', priceNote: 'First month included'
+      }
+    ];
+    const picked = defs.filter(d => s.addons.includes(d.id));
+    const total = picked.reduce((n, d) => n + (d.id === 'logo' ? 14.99 : d.id === 'pack' ? 20 : 0), 0);
+    return {
+      upsellLead: 'You bid on ' + cur.name + '. These three tools take it from a name to a launched brand — each one primed with the domain you\'re bidding on.',
+      upsellTotal: picked.length ? '$' + total.toFixed(2) : '$0.00',
+      upsellCountLabel: picked.length ? picked.length + ' of 3 selected' : 'Nothing selected yet',
+      upsellFootnote: 'Add-ons attach to ' + cur.name + ' and only bill if you win the auction. Monthly items renew at list price; cancel any time.',
+      bundleCta: s.addons.length === 3 ? 'All three added' : 'Add all three',
+      addBundle: () => this.setState({ addons: defs.map(d => d.id) }),
+      upsells: defs.map(d => {
+        const on = s.addons.includes(d.id);
+        return {
+          ...d,
+          picked: on,
+          card: 'display:flex;flex-direction:column;padding:24px;border-radius:16px;background:#fff;transition:box-shadow 200ms cubic-bezier(.2,0,.2,1);' +
+            (on ? 'border:1.5px solid #E08542;box-shadow:var(--ns-shadow-md)' : 'border:1px solid var(--ns-border-subtle);box-shadow:var(--ns-shadow-xs)'),
+          tagStyle: 'display:inline-flex;align-items:center;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;' +
+            (on ? 'background:#9C4A14;color:#fff' : 'background:#FBEADF;color:#9C4A14'),
+          cta: on ? 'Remove' : 'Add to order',
+          ctaStyle: 'min-height:44px;padding:0 20px;border-radius:999px;font-family:var(--ns-font-body);font-size:14px;font-weight:600;cursor:pointer;transition:background 200ms cubic-bezier(.2,0,.2,1);' +
+            (on ? 'background:#fff;border:1.5px solid var(--ns-neutral-900);color:var(--ns-neutral-900)' : 'background:#E08542;border:1.5px solid #E08542;color:#fff'),
+          pick: () => this.setState(st => ({
+            addons: st.addons.includes(d.id) ? st.addons.filter(x => x !== d.id) : st.addons.concat(d.id)
+          }))
+        };
+      })
+    };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const all = this.filtered();
+    const pageCount = Math.max(1, Math.ceil(all.length / s.perPage));
+    const page = Math.min(s.page, pageCount);
+    const slice = all.slice((page - 1) * s.perPage, page * s.perPage);
+    const cur = ALL.find(d => d.name === s.detail) || EXACT;
+    const inCart = s.cart.includes(cur.name);
+    const isDetail = s.view === 'detail';
+    const bid = s.bid == null ? cur.price : s.bid;
+
+    return {
+      query: s.query,
+      onQuery: e => this.setState({ query: e.target.value }),
+      crumb: isDetail ? cur.name : 'Search results',
+      cartLabel: 'Cart (' + s.cart.length + ')',
+      resultLine: isDetail
+        ? cur.name + ' · ' + cur.cat + ' · ' + (cur.bidders || 'no') + ' bidders'
+        : '1 exact match for "' + s.query + '" — plus ' + DATA.length + ' similar names open in the aftermarket now',
+      alertTitle: isDetail ? 'Track ' + cur.name : 'Set an alert for ' + s.query,
+      isDetail, isResults: !isDetail,
+      back: () => this.setState({ view: 'results' }),
+
+      exact: {
+        name: EXACT.name, price: this.money(EXACT.price), priceNote: 'Opening bid, transfer included',
+        summary: EXACT.age + ' old · ' + EXACT.bidders + ' bidders · EstiBot $' + EXACT.esti.toLocaleString('en-US'),
+        clock: EXACT.clock, open: () => this.open(EXACT)
+      },
+
+      d: this.detailVals(cur),
+      bidText: String(bid),
+      onBid: e => this.setState({ bid: Math.max(cur.price, Number(e.target.value.replace(/[^0-9]/g, '')) || cur.price) }),
+      bidUp: () => this.setState({ bid: bid + 5 }),
+      bidDown: () => this.setState({ bid: Math.max(cur.price, bid - 5) }),
+      cartCta: inCart ? 'In cart' : cur.status === 'Buy it now' ? 'Buy now' : 'Add to cart',
+      addToCart: () => this.setState({ modal: 'form' }),
+      proxyOpen: s.proxyOpen,
+      proxyLabel: s.proxyOpen ? 'Hide how proxy bidding works' : 'How does proxy bidding work?',
+      toggleProxy: () => this.setState(st => ({ proxyOpen: !st.proxyOpen })),
+      notifOpen: s.notifOpen,
+      toggleNotif: () => this.setState(st => ({ notifOpen: !st.notifOpen })),
+      notes: ['Outbid alerts', 'Auction opening', 'Closing in one hour'].map(l => this.toggleRow('notesOff', l)),
+
+      modalOpen: !!s.modal,
+      modalForm: s.modal === 'form',
+      modalPending: s.modal === 'pending',
+      modalDone: s.modal === 'cart' || s.modal === 'order',
+      modalTitle: s.modal === 'order' ? 'Order placed' : s.modal === 'cart' ? 'Added to cart' : cur.status === 'Buy it now' ? 'Buy ' + cur.name : 'Bid on ' + cur.name,
+      modalDoneText: s.modal === 'order'
+        ? cur.name + ' is ordered at ' + this.money(bid) + '. We\'ll email you when the auction resolves.'
+        : cur.name + ' is in your cart at ' + this.money(bid) + '. Nothing else in the cart changed.',
+      closeModal: () => this.setState({ modal: null }),
+      confirmCart: () => {
+        this.setState({ modal: 'pending' });
+        setTimeout(() => this.setState(st => ({ modal: 'cart', cart: st.cart.includes(cur.name) ? st.cart : st.cart.concat(cur.name) })), 900);
+      },
+      placeOrder: () => {
+        this.setState({ modal: 'pending' });
+        setTimeout(() => this.setState({ modal: 'order' }), 900);
+      },
+
+      menuOpen: s.menuOpen,
+      toggleMenu: () => this.setState(st => ({ menuOpen: !st.menuOpen })),
+      menuGroups: [
+        { title: 'Buyer dashboard', items: ['My auctions', 'Pending orders'] },
+        { title: 'Inventory', items: ['Search', 'Hot picks', 'Expired domains', 'Last chance', 'Pending delete', 'Download auction lists'] },
+        { title: 'Financial center', items: ['Payment center', 'Add funds', 'Financial history', 'Purchase history', 'Order history'] },
+        { title: 'Bulk tools', items: ['Bulk order', 'Bulk bid', 'Bulk delete', 'Bulk set favorites'] },
+        { title: 'My account', items: ['Auction profile', 'Preferences', 'Pre-registration info', 'Notifications'] },
+        { title: 'How it works', items: ['How SnapNames works', 'Verified bidder', 'User guide'] }
+      ],
+      footerCols: [
+        { title: 'Aftermarket', items: ['Domains 101', 'How to buy', 'Verified bidder', 'Domain auctions', 'Daily auctions'] },
+        { title: 'Support', items: ['Support', 'Contact', 'FAQs', 'Report abuse', 'Cookie settings'] },
+        { title: 'Resources', items: ['Whois search', 'Site map', 'DMCA policy', 'Dispute policy', 'Report ethical hacking'] },
+        { title: 'About SnapNames', items: ['About us', 'Careers'] }
+      ],
+      tipOpen: s.tipOpen,
+      closeTip: () => this.setState({ tipOpen: false }),
+      alsoLike: DATA.filter(d => d.name !== cur.name).slice(0, 5).map(d => ({
+        name: d.name, price: this.money(d.price), status: d.status, statusStyle: this.pill(d.status),
+        biddersLine: d.bidders ? d.bidders + ' bidders' : 'No bidding', open: () => this.open(d)
+      })),
+
+      ...this.upsellVals(cur),
+
+      countLine: all.length + ' listings · page ' + page + ' of ' + pageCount,
+      empty: all.length === 0,
+      priceDisplay: s.maxPrice >= 200 ? 'Any price' : 'Up to ' + this.money(s.maxPrice),
+      maxPrice: s.maxPrice,
+      onPrice: e => this.setState({ maxPrice: Number(e.target.value), page: 1 }),
+      sort: s.sort,
+      onSort: e => this.setState({ sort: e.target.value, page: 1 }),
+      perPage: String(s.perPage),
+      onPerPage: e => this.setState({ perPage: Number(e.target.value), page: 1 }),
+      scopes: SCOPES.map(label => ({ label, style: this.chip(s.scope === label), pick: () => this.setState({ scope: label, page: 1 }) })),
+      tldChips: TLDS.map(label => ({
+        label, style: this.chip(s.tlds.includes(label)),
+        pick: () => this.setState(st => ({ tlds: st.tlds.includes(label) ? st.tlds.filter(t => t !== label) : st.tlds.concat(label), page: 1 }))
+      })),
+      listing: Object.keys(PILL).map(l => this.toggleRow('off', l)),
+      rows: slice.map(d => {
+        const watched = s.watch.includes(d.name);
+        return {
+          name: d.name, cat: d.cat, clock: d.clock, status: d.status, statusStyle: this.pill(d.status),
+          biddersLine: d.bidders ? d.bidders + ' bidders' : 'No bidding',
+          price: this.money(d.price), priceNote: this.priceNote(d),
+          action: d.status === 'Buy it now' ? 'Buy now' : d.status === 'Available soon' ? 'Order now' : 'Place bid',
+          open: () => this.open(d),
+          watched, watchLabel: watched ? 'Watching' : 'Watch',
+          watchStyle: 'min-height:36px;padding:0 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;' +
+            (watched ? 'background:var(--ns-neutral-900);border:1.5px solid var(--ns-neutral-900);color:#fff' : 'background:#fff;border:1.5px solid var(--ns-border-subtle);color:var(--ns-text-primary)'),
+          onWatch: () => this.setState(st => ({ watch: st.watch.includes(d.name) ? st.watch.filter(n => n !== d.name) : st.watch.concat(d.name) }))
+        };
+      }),
+      pages: Array.from({ length: pageCount }, (_, i) => i + 1).map(n => ({
+        label: String(n),
+        style: 'min-width:40px;min-height:36px;padding:0 12px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;' +
+          (n === page ? 'background:#E08542;border:1.5px solid #E08542;color:#fff' : 'background:#fff;border:1.5px solid var(--ns-border-subtle);color:var(--ns-text-primary)'),
+        pick: () => this.setState({ page: n })
+      })),
+      prev: () => this.setState(st => ({ page: Math.max(1, st.page - 1) })),
+      next: () => this.setState({ page: Math.min(pageCount, page + 1) }),
+      reset: () => this.setState({ scope: 'All similar', tlds: [], maxPrice: 200, off: [], sort: 'Best match', page: 1 })
+    };
+  }
+}
+</script>
+</body>
+</html>

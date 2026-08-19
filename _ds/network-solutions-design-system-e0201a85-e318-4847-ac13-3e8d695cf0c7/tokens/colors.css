@@ -1,0 +1,52 @@
+:root{
+  /* Blue — primary */
+  --ns-blue-50:#EEF3FE;--ns-blue-100:#D6E2FC;--ns-blue-200:#AEC5F9;--ns-blue-300:#7FA3F4;
+  --ns-blue-400:#5286EF;--ns-blue-500:#326EEA;--ns-blue-600:#2456C4;--ns-blue-700:#1C439A;
+  --ns-blue-800:#163471;--ns-blue-900:#10244C;
+
+  /* Amber — accent */
+  --ns-amber-50:#FDF4EC;--ns-amber-100:#F9E3CF;--ns-amber-200:#EFC49C;--ns-amber-300:#E08542;
+  --ns-amber-400:#CE7233;--ns-amber-500:#B25E28;--ns-amber-600:#8C481D;--ns-amber-700:#653316;
+
+  /* Orange — secondary accent */
+  --ns-orange-50:#FFF1EA;--ns-orange-100:#FFDDCB;--ns-orange-300:#FEA075;
+  --ns-orange-500:#FC7439;--ns-orange-600:#E2551A;--ns-orange-700:#B33F0F;
+
+  /* Neutrals */
+  --ns-white:#FFFFFF;--ns-neutral-25:#FAFAFA;--ns-neutral-50:#F5F5F6;--ns-neutral-100:#EDEDEF;
+  --ns-neutral-200:#DFDFE2;--ns-neutral-300:#C4C4C9;--ns-neutral-400:#9A9AA1;--ns-neutral-500:#74747C;
+  --ns-neutral-600:#55555C;--ns-neutral-700:#3D3D43;--ns-neutral-800:#29292E;--ns-neutral-900:#1A1A1A;
+  --ns-neutral-950:#0F0F11;
+
+  /* Feedback */
+  --ns-success-50:#E9F7F0;--ns-success-600:#1E8E5A;
+  --ns-warning-50:#FDF4E3;--ns-warning-600:#B8730A;
+  --ns-error-50:#FDECEA;--ns-error-600:#C4321F;
+
+  /* Semantic: surfaces */
+  --ns-surface-page:var(--ns-white);
+  --ns-surface-subtle:var(--ns-neutral-50);
+  --ns-surface-raised:var(--ns-white);
+  --ns-surface-inverse:var(--ns-neutral-900);
+  --ns-surface-inverse-alt:var(--ns-neutral-800);
+  --ns-surface-brand:var(--ns-blue-500);
+  --ns-surface-accent:var(--ns-amber-300);
+
+  /* Semantic: text */
+  --ns-text-primary:var(--ns-neutral-900);
+  --ns-text-secondary:var(--ns-neutral-600);
+  --ns-text-muted:var(--ns-neutral-500);
+  --ns-text-on-dark:var(--ns-white);
+  --ns-text-on-dark-dim:var(--ns-neutral-300);
+  --ns-text-on-accent:var(--ns-neutral-900);
+  --ns-text-link:var(--ns-blue-600);
+  --ns-text-link-hover:var(--ns-blue-700);
+
+  /* Semantic: borders */
+  --ns-border-subtle:var(--ns-neutral-200);
+  --ns-border-default:var(--ns-neutral-300);
+  --ns-border-strong:var(--ns-neutral-900);
+  --ns-border-on-dark:rgba(255,255,255,.18);
+  --ns-focus-ring:var(--ns-blue-500);
+  --ns-focus-ring-on-dark:var(--ns-amber-300);
+}

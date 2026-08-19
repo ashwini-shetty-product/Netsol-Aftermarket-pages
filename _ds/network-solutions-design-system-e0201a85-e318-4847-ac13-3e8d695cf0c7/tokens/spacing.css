@@ -1,0 +1,8 @@
+:root{
+  --ns-space-1:.25rem;--ns-space-2:.5rem;--ns-space-3:.75rem;--ns-space-4:1rem;--ns-space-5:1.25rem;
+  --ns-space-6:1.5rem;--ns-space-8:2rem;--ns-space-10:2.5rem;--ns-space-12:3rem;--ns-space-16:4rem;
+  --ns-space-20:5rem;--ns-space-24:6rem;--ns-space-30:7.5rem;
+
+  --ns-radius-xs:4px;--ns-radius-sm:8px;--ns-radius-md:12px;--ns-radius-lg:16px;
+  --ns-radius-xl:24px;--ns-radius-2xl:32px;--ns-radius-pill:999px;
+}

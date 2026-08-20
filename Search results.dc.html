@@ -389,6 +389,21 @@ class Component extends DCLogic {
     menuOpen: false, modal: null, tipOpen: true, notifOpen: false, addons: []
   };
 
+  componentDidMount() {
+    const p = new URLSearchParams(window.location.search);
+    const d = (p.get('d') || '').toLowerCase();
+    const q = (p.get('q') || '').toLowerCase();
+    const hit = ALL.find(x => x.name === d);
+    if (hit) this.setState({ query: hit.name, view: 'detail', detail: hit.name, bid: hit.price });
+    else if (q) this.setState({ query: q, view: 'results' });
+  }
+
+  toSnapnames(name, amount, intent) {
+    const url = 'https://www.snapnames.com/cart.action?domain=' + encodeURIComponent(name) +
+      '&amount=' + amount + '&action=' + intent + '&addToCart=true';
+    window.open(url, '_blank', 'noopener');
+  }
+
   chip(active) {
     return 'display:inline-flex;align-items:center;min-height:34px;padding:0 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;transition:background 200ms cubic-bezier(.2,0,.2,1);' +
       (active ? 'background:#E08542;border:1.5px solid #E08542;color:#fff' : 'background:#fff;border:1.5px solid var(--ns-border-subtle);color:var(--ns-text-primary)');
@@ -550,11 +565,14 @@ class Component extends DCLogic {
       isDetail, isResults: !isDetail,
       back: () => this.setState({ view: 'results' }),
 
-      exact: {
-        name: EXACT.name, price: this.money(EXACT.price), priceNote: 'Opening bid, transfer included',
-        summary: EXACT.age + ' old · ' + EXACT.bidders + ' bidders · EstiBot $' + EXACT.esti.toLocaleString('en-US'),
-        clock: EXACT.clock, open: () => this.open(EXACT)
-      },
+      exact: (() => {
+        const m = ALL.find(x => x.name === s.query.trim().toLowerCase()) || EXACT;
+        return {
+          name: m.name, price: this.money(m.price), priceNote: this.priceNote(m),
+          summary: m.age + ' old · ' + m.bidders + ' bidders · EstiBot $' + m.esti.toLocaleString('en-US'),
+          clock: m.clock, open: () => this.open(m)
+        };
+      })(),
 
       d: this.detailVals(cur),
       bidText: String(bid),
@@ -581,11 +599,17 @@ class Component extends DCLogic {
       closeModal: () => this.setState({ modal: null }),
       confirmCart: () => {
         this.setState({ modal: 'pending' });
-        setTimeout(() => this.setState(st => ({ modal: 'cart', cart: st.cart.includes(cur.name) ? st.cart : st.cart.concat(cur.name) })), 900);
+        setTimeout(() => {
+          this.setState(st => ({ modal: 'cart', cart: st.cart.includes(cur.name) ? st.cart : st.cart.concat(cur.name) }));
+          this.toSnapnames(cur.name, bid, 'cart');
+        }, 900);
       },
       placeOrder: () => {
         this.setState({ modal: 'pending' });
-        setTimeout(() => this.setState({ modal: 'order' }), 900);
+        setTimeout(() => {
+          this.setState({ modal: 'order' });
+          this.toSnapnames(cur.name, bid, 'order');
+        }, 900);
       },
 
       menuOpen: s.menuOpen,
